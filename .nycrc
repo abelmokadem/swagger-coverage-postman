@@ -9,6 +9,11 @@
       "text",
       "lcov"
     ],
+    "instrument": false,
+    "sourceMap": false,
+    "require": [
+      "babel-register"
+    ],
     "include": [
       "src"
     ]
