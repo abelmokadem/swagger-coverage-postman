@@ -1,17 +1,19 @@
-sudo: false
 language: node_js
 cache:
   directories:
     - node_modules
+notifications:
+  email: false
 node_js:
-    - 6
-    - 7
+  - '7'
+  - '6'
 branches:
   only:
     - master
-notifications:
-  email: false
+before_script:
+  - npm prune
 script:
-    - npm run validate
+  - npm run validate
 after_success:
-    - npm run report-coverage 
+  - npm run report-coverage
+  - npm run release
