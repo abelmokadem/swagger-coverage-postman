@@ -1,7 +1,12 @@
 # npm-lib-boilerplate
 
-[![Travis](https://img.shields.io/travis/mvashwinkumar/test.svg?style=flat-square)](https://travis-ci.org/mvashwinkumar/test)
-[![Codecov](https://img.shields.io/codecov/c/github/mvashwinkumar/test.svg?style=flat-square)](https://codecov.io/gh/mvashwinkumar/test)
+[![Travis](https://img.shields.io/travis/mvashwinkumar/npm-lib-boilerplate.svg?style=flat-square)](https://travis-ci.org/mvashwinkumar/npm-lib-boilerplate)
+[![Codecov](https://img.shields.io/codecov/c/github/mvashwinkumar/npm-lib-boilerplate.svg?style=flat-square)](https://codecov.io/gh/mvashwinkumar/npm-lib-boilerplate)
+[![version](https://img.shields.io/npm/v/npm-lib-boilerplate.svg?style=flat-square)](http://npm.im/npm-lib-boilerplate)
+[![downloads](https://img.shields.io/npm/dm/npm-lib-boilerplate.svg?style=flat-square)](http://npm-stat.com/charts.html?package=npm-lib-boilerplate&from=2016-01-01)
+[![license](https://img.shields.io/github/license/mashape/apistatus.svg?style=flat-square)](http://opensource.org/licenses/MIT)
+[![semantic-release](https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg?style=flat-square)](https://github.com/semantic-release/semantic-release)
+
 
 This project provides the boilerplate code needed for making an NPM module.
 

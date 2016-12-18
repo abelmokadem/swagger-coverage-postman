@@ -1,5 +1,5 @@
 {
-  "name": "test-sgbusroutes",
+  "name": "npm-lib-boilerplate",
   "version": "0.0.0-semantically-released",
   "description": "this is a test open source lib project returning sg bus stops and routes info",
   "main": "dist/index.js",
@@ -19,11 +19,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/mvashwinkumar/test.git"
+    "url": "https://github.com/mvashwinkumar/npm-lib-boilerplate.git"
   },
   "keywords": [
     "open source",
-    "jslib",
+    "npm",
+    "library",
     "boilerplate"
   ],
   "files": [
