@@ -1,7 +1,7 @@
 {
   "name": "npm-lib-boilerplate",
   "version": "0.0.0-semantically-released",
-  "description": "this is a test open source lib project returning sg bus stops and routes info",
+  "description": "Starter kit to build NPM modules with ease",
   "main": "dist/index.js",
   "scripts": {
     "commit": "git-cz",
@@ -25,7 +25,9 @@
     "open source",
     "npm",
     "library",
-    "boilerplate"
+    "boilerplate",
+    "starter kit",
+    "module builder"
   ],
   "files": [
     "dist"
@@ -33,9 +35,9 @@
   "author": "Ashwin Kumar M V <mvashwinkumar@gmail.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/mvashwinkumar/test/issues"
+    "url": "https://github.com/mvashwinkumar/npm-lib-boilerplate/issues"
   },
-  "homepage": "https://github.com/mvashwinkumar/test#readme",
+  "homepage": "https://github.com/mvashwinkumar/npm-lib-boilerplate#npm-lib-boilerplate",
   "devDependencies": {
     "babel-cli": "^6.18.0",
     "babel-loader": "^6.2.10",
