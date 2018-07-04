@@ -11,8 +11,8 @@
     "lint": "npx prettier -l '{src,test}/**/*.{js,json}'",
     "lint:fix": "npx prettier --write '{src,test}/**/*.{js,json}'",
     "report-coverage": "cat ./coverage/lcov.info | codecov",
-    "test": "cross-env NODE_ENV=test nyc mocha",
-    "watch:test": "mocha --watch",
+    "test": "cross-env NODE_ENV=test nyc mocha --compilers js:babel-core/register",
+    "watch:test": "mocha --compilers js:babel-core/register --watch",
     "validate": "npm-run-all --parallel lint test build",
     "release": "semantic-release pre && npm publish && semantic-release post"
   },
@@ -70,8 +70,5 @@
     "postman-collection": "^3.1.1",
     "sway": "^1.0.0",
     "underscore": "^1.8.3"
-  },
-  "peerDependencies": {
-    "jquery": "*"
   }
 }
