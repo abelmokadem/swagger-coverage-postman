@@ -18,6 +18,10 @@ before_script:
   - npm install -g npx
 script:
   - npm run validate
-after_success:
-  - npm run report-coverage
-  - npm run release
+jobs:
+  include:
+    - stage: deploy
+      node_js: '10'
+      script:
+        - npm run report-coverage
+        - npm run release
