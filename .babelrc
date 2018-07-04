@@ -1,12 +1,19 @@
 {
-    "presets": [
-        "es2015"
-    ],
-    "env": {
-        "test":{
-            "plugins": [
-                "istanbul"
-            ]
+  "presets": [
+    [
+      "env",
+      {
+        "targets": {
+          "node": "6"
         }
-    }    
+      }
+    ]
+  ],
+  "env": {
+    "test": {
+      "plugins": [
+        "istanbul"
+      ]
+    }
+  }
 }
