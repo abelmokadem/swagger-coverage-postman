@@ -19,8 +19,8 @@ npm install --save swagger-coverage-postman
 ```javascript
 const coverage = require("swagger-coverage-postman")
 
-const coverageSummary = coverage.getSummary(api, tests)
+const coverageSummary = await coverage.summary(api, tests)
 
 console.log(coverageSummary)
-// { paths: 100.0, methods: 86.7, parameters: 15.0 }
+// { paths: 1, methods: 0.86, parameters: 0.15 } 
 ```

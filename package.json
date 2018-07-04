@@ -10,7 +10,8 @@
     "build:main": "babel --copy-files --out-dir dist --ignore *.test.js src",
     "build:umd": "webpack --output-filename index.umd.js",
     "build:umd.min": "webpack --output-filename index.umd.min.js -p",
-    "lint": "eslint src",
+    "lint": "npx prettier -l '{src,test}/**/*.{js,json}'",
+    "lint:fix": "npx prettier --write '{src,test}/**/*.{js,json}'",
     "report-coverage": "cat ./coverage/lcov.info | codecov",
     "test": "cross-env NODE_ENV=test nyc mocha",
     "watch:test": "mocha --watch",
@@ -49,12 +50,13 @@
     "commitizen": "^2.9.0",
     "cross-env": "^3.1.3",
     "cz-conventional-changelog": "^1.2.0",
-    "eslint": "^3.12.2",
     "ghooks": "^1.3.2",
     "json-loader": "^0.5.4",
+    "json-schema-ref-parser": "^5.0.3",
     "mocha": "^3.2.0",
     "npm-run-all": "^3.1.2",
     "nyc": "^10.0.0",
+    "prettier": "^1.13.7",
     "rimraf": "^2.5.4",
     "semantic-release": "^6.3.2",
     "validate-commit-msg": "^2.8.2",
@@ -70,6 +72,8 @@
     }
   },
   "dependencies": {
+    "postman-collection": "^3.1.1",
+    "sway": "^1.0.0",
     "underscore": "^1.8.3"
   },
   "peerDependencies": {

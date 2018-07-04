@@ -1,12 +1,19 @@
-'use strict';
+"use strict";
 
-var data = require('./data.json');
+const sway = require("sway");
+const Collection = require("postman-collection").Collection;
 
-const mainExport = {
-    all : data,
-    types : data.types,
-    services : data.services
-}
+const getPathsCoverage = require("./paths");
+const getMethodsCoverage = require("./methods");
+const getParametersCoverage = require("./parameters");
 
-export default mainExport
-module.exports = mainExport  // for CommonJS compatibility
+exports.summary = async (api, tests) => {
+  const swaggerApi = await sway.create({ definition: api });
+  const postmanCollection = new Collection(tests);
+
+  return {
+    paths: getPathsCoverage(swaggerApi, postmanCollection),
+    methods: getMethodsCoverage(swaggerApi, postmanCollection),
+    parameters: getParametersCoverage(swaggerApi, postmanCollection)
+  };
+};

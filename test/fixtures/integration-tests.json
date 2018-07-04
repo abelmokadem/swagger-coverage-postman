@@ -1,0 +1,53 @@
+{
+  "variables": [],
+  "info": {
+    "name": "blueprint examples 3",
+    "_postman_id": "35a78331-141d-d651-57c3-98cf5710daec",
+    "description": "",
+    "schema":
+      "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "GET /blueprint/examples/3/echo/1/2",
+      "request": {
+        "url": "https://{{host}}/blueprint/examples/3/echo/1/2",
+        "method": "GET",
+        "header": [],
+        "body": {}
+      },
+      "response": []
+    },
+    {
+      "name": "GET /blueprint/examples/3/echo/1/2",
+      "request": {
+        "url": "https://{{host}}/blueprint/examples/3/echo/1/2",
+        "method": "GET",
+        "header": [],
+        "body": {}
+      },
+      "response": []
+    },
+    {
+      "name": "GET /blueprint/examples/3/echo/1/2?v=illegal&z=parameter",
+      "request": {
+        "url":
+          "https://{{host}}/blueprint/examples/3/echo/1/2?v=illegal&z=parameter",
+        "method": "GET",
+        "header": [],
+        "body": {}
+      },
+      "response": []
+    },
+    {
+      "name": "POST /blueprint/examples/3/echo",
+      "request": {
+        "url": "https://{{host}}/blueprint/examples/3/echo",
+        "method": "POST",
+        "header": [],
+        "body": {}
+      },
+      "response": []
+    }
+  ]
+}

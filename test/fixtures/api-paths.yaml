@@ -1,0 +1,41 @@
+swagger: '2.0'
+info:
+  version: '1.4'
+  title: Pass Through API
+  description: 'A simple hello world API'
+
+basePath: "/blueprint/examples/3"
+
+paths:
+  /echo/{firstName}:
+    get:
+      consumes:
+        - application/json
+      parameters:
+        - name: firstName
+          in: path
+          required: true
+          type: string
+      responses:
+        '200':
+          description: 200 response
+          schema:
+            type: string
+  /echo/{firstName}/{lastName}:
+    get:
+      consumes:
+        - application/json
+      parameters:
+        - name: firstName
+          in: path
+          required: true
+          type: string
+        - name: lastName
+          in: path
+          required: true
+          type: string
+      responses:
+        '200':
+          description: 200 response
+          schema:
+            type: string
