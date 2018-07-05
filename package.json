@@ -1,6 +1,6 @@
 {
   "name": "swagger-coverage-postman",
-  "version": "0.0.1",
+  "version": "0.0.0-development",
   "description": "Generate API coverage between your Swagger definition and Postman collection",
   "main": "dist/index.js",
   "scripts": {
@@ -14,7 +14,8 @@
     "test": "cross-env NODE_ENV=test nyc mocha --compilers js:babel-core/register",
     "watch:test": "mocha --compilers js:babel-core/register --watch",
     "validate": "npm-run-all --parallel lint test build",
-    "release": "semantic-release pre && npm publish && semantic-release post"
+    "release": "semantic-release",
+    "travis-deploy-once": "travis-deploy-once"
   },
   "repository": {
     "type": "git",
@@ -70,7 +71,8 @@
     "prettier": "^1.13.7",
     "rimraf": "^2.5.4",
     "semantic-release": "^15.6.3",
-    "validate-commit-msg": "^2.8.2"
+    "validate-commit-msg": "^2.8.2",
+    "travis-deploy-once": "^5.0.1"
   },
   "config": {
     "commitizen": {
