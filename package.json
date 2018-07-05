@@ -1,6 +1,6 @@
 {
   "name": "swagger-coverage-postman",
-  "version": "0.0.0-development",
+  "version": "1.1.0",
   "description": "Generate API coverage between your Swagger definition and Postman collection",
   "main": "dist/index.js",
   "scripts": {
