@@ -17,10 +17,20 @@ npm install --save swagger-coverage-postman
 ```
 
 ```javascript
-const coverage = require("swagger-coverage-postman")
+const coverage = require("swagger-coverage-postman");
+const refParser = require("json-schema-ref-parser");
 
-const coverageSummary = await coverage.summary(api, tests)
+// Load swagger file
+const apiFile = path.join(__dirname, "api.yaml");
+const api = await refParser.dereference(apiFile);
 
-console.log(coverageSummary)
+// Load postman integration test file
+const integrationTestsFile = path.join(__dirname, "integration-tests.json");
+const integrationTests = require(integrationTestsFile);
+
+// Calculate coverage summary
+const coverageSummary = await coverage.summary(api, integrationTests);
+
+console.log(coverageSummary);
 // { paths: 1, methods: 0.86, parameters: 0.15 } 
 ```

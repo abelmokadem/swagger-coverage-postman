@@ -1,1 +1,1 @@
-module.exports = api => api.getPaths()
+module.exports = api => api.getPaths();

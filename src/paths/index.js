@@ -7,13 +7,16 @@ const getPaths = require("../lib/swagger/get-paths");
  * @param {Collection} tests
  */
 module.exports = (api, tests) => {
-  const pathAndMethodsCoveredInTests = getPathsAndMethods(tests)
+  const pathAndMethodsCoveredInTests = getPathsAndMethods(tests);
   const apiPaths = getPaths(api);
 
   return apiPaths
-    .map(apiPath => !!pathAndMethodsCoveredInTests.find(({path}) => {
-      return !!apiPath.regexp.test(path)
-    }))
+    .map(
+      apiPath =>
+        !!pathAndMethodsCoveredInTests.find(({ path }) => {
+          return !!apiPath.regexp.test(path);
+        })
+    )
     .reduce(
       (total, result, index, results) =>
         result ? total + 1 / results.length : total,
