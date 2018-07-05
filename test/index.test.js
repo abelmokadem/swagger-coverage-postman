@@ -17,7 +17,7 @@ it("should generate a coverage summary", async () => {
 
   const result = await coverage.summary(api, integrationTests);
 
-  expect(result.paths).to.be.equal(0.75);
-  expect(result.methods).to.be.equal(0);
-  expect(result.parameters).to.be.equal(0);
+  expect(result.paths).to.be.equal(1 / 2, 'Paths coverage should be 0.5');
+  expect(result.methods).to.be.equal(1 / 3, 'Methods coverage should be 0.33');
+  expect(result.parameters).to.be.equal(0, 'Parameters coverage should be 0');
 });

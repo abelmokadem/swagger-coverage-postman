@@ -39,3 +39,20 @@ paths:
           description: 200 response
           schema:
             type: string
+    post:
+      consumes:
+        - application/json
+      parameters:
+        - name: firstName
+          in: path
+          required: true
+          type: string
+        - name: lastName
+          in: path
+          required: true
+          type: string
+      responses:
+        '200':
+          description: 200 response
+          schema:
+            type: string

@@ -1,5 +1,5 @@
-const getPaths = require("../lib/postman/get-paths");
-const getPathExpressions = require("../lib/swagger/get-path-expressions");
+const getPathsAndMethods = require("../lib/postman/get-paths-and-methods");
+const getPaths = require("../lib/swagger/get-paths");
 
 /**
  *
@@ -7,11 +7,13 @@ const getPathExpressions = require("../lib/swagger/get-path-expressions");
  * @param {Collection} tests
  */
 module.exports = (api, tests) => {
-  const pathsCoveredInTests = getPaths(tests);
-  const pathExpressions = getPathExpressions(api);
+  const pathAndMethodsCoveredInTests = getPathsAndMethods(tests)
+  const apiPaths = getPaths(api);
 
-  return pathsCoveredInTests
-    .map(path => !!pathExpressions.find(expression => expression.test(path)))
+  return apiPaths
+    .map(apiPath => !!pathAndMethodsCoveredInTests.find(({path}) => {
+      return !!apiPath.regexp.test(path)
+    }))
     .reduce(
       (total, result, index, results) =>
         result ? total + 1 / results.length : total,
