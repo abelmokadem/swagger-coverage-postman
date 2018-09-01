@@ -1,4 +1,4 @@
-const sway = require('sway')
+const sway = require("sway");
 const expect = require("chai").expect;
 const getParameters = require("./get-parameters");
 const refParser = require("json-schema-ref-parser").YAML;
@@ -22,11 +22,14 @@ paths:
 `;
 
 it("should get all parameters", async () => {
-    const api = await sway.create({definition: await refParser.parse(fixture)});
+  const api = await sway.create({ definition: await refParser.parse(fixture) });
 
-    const result = getParameters(api);
+  const result = getParameters(api);
 
-    expect(result.length).to.be.equal(1, "Should find 1 parameter");
-    expect(result[0].name).to.be.equal('firstName', "Parameter 0 name is firstName");
-    expect(result[0].in).to.be.equal('path', "Parameter 0 is in path");
+  expect(result.length).to.be.equal(1, "Should find 1 parameter");
+  expect(result[0].name).to.be.equal(
+    "firstName",
+    "Parameter 0 name is firstName"
+  );
+  expect(result[0].in).to.be.equal("path", "Parameter 0 is in path");
 });

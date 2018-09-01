@@ -11,8 +11,8 @@
     "lint": "npx prettier -l '{src,test}/**/*.{js,json}'",
     "lint:fix": "npx prettier --write '{src,test}/**/*.{js,json}'",
     "report-coverage": "cat ./coverage/lcov.info | codecov",
-    "test": "cross-env NODE_ENV=test nyc mocha --recursive './src/**/*.spec.js' --compilers js:babel-core/register",
-    "watch:test": "mocha --recursive './src/**/*.spec.js' --compilers js:babel-core/register --watch",
+    "test": "cross-env NODE_ENV=test nyc mocha --recursive './test/**/*.js' --recursive './src/**/*.spec.js' --compilers js:babel-core/register",
+    "watch:test": "mocha --recursive './test/**/*.js' --recursive './src/**/*.spec.js' --compilers js:babel-core/register --watch",
     "validate": "npm-run-all --parallel lint test build",
     "release": "semantic-release",
     "travis-deploy-once": "travis-deploy-once"
